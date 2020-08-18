@@ -27,10 +27,10 @@
                         <div style="display:none" class="alert alert-danger"></div>
                     </div>
 
-                    <form id="login_form" class="form-horizontal" role="form">
+                    <form id="login_form" class="form-horizontal" role="form" method="POST" action="login.php">
                         <div style="margin-bottom: 25px" class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input id="login_username" type="text" class="form-control" name="loogin_username" value=""
+                            <input id="login_email" type="text" class="form-control" name="login_email" value=""
                                 placeholder="username or email">
                         </div>
 
@@ -43,18 +43,15 @@
                         <div class="input-group">
                             <div class="checkbox">
                                 <label>
-                                    <input id="login_remember" type="checkbox" name="login_remember" value="1">Remember
-                                    me
+                                    <input id="login_remember" type="checkbox" name="login_remember" value="1">Remember me
                                 </label>
                             </div>
                         </div>
 
-                        <div style="margin-top:10px" class="form-group">
+                        <div class="input-group" style="margin-top:10px; margin-bottom: 25px">
                             <!-- Button -->
 
-                            <div class="col-sm-12 controls">
-                                <a id="btn_login" name="btn_login" class="btn btn-success">Login</a>
-                            </div>
+                            <button class="col-sm-12 controls btn btn-success" id="btn_login" name="btn_login" class="">Login</button>
                         </div>
 
                         <div class="form-group">
@@ -81,7 +78,7 @@
                             onclick="$('#signup_box').hide(); $('#login_box').show()">Sign In</a></div>
                 </div>
                 <div class="panel-body">
-                    <form id="signup_form" class="form-horizontal" role="form">
+                    <form id="signup_form" class="form-horizontal" role="form" method="POST" action="login.php">
                         <div id="signup_alert">
                             <div style="display:none" class="alert alert-danger"></div>
                         </div>
@@ -116,12 +113,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="input-group">
                             <!-- Button -->
-                            <div class="col-md-offset-3 col-md-9">
-                                <button id="btn_register" name="btn_register" type="button" class="btn btn-info"><i
-                                        class="icon-hand-right"></i>Sign Up</button>
-                            </div>
+                            <button class="btn btn-info" id="btn_register" name="btn_register">Sign up</button>
                         </div>
 
                     </form>
@@ -129,8 +123,7 @@
             </div>
         </div>
     </div>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="jquery.min.js"></script>
 </body>
 
 </html>
